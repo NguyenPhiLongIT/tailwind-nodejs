@@ -1,0 +1,37 @@
+.follow div:hover span, .controls button:hover span{
+    visibility: visible;
+    transform: translateX(15%) translateY(50%);
+    transition-duration: .5s;
+}
+.collapsible a::before{
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+.collapsible a:hover::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.collapsible a::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #222831;
+    z-index: -1;
+    transition: transform .3s ease;
+}
+.projects:hover{
+    transition: all .3s;
+    box-shadow: 30px 20px 10px -10px #222831;
+}
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    background: none;
+    color: #777;
+    padding: 19px 10px;
+    margin-bottom: 24px;
+    outline: none;
+    border: 2px solid #0288D1;
+}

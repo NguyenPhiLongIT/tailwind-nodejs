@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/output.css">
+    <title>Portfolio</title>
+</head>
+
+<body class="bg-zinc-600 font-serif">
+    <div class="relative h-screen overflow-hidden">
+        <div id="slider-page" class="absolute h-full flex">
+            <%- include('./about') %>
+            <%- include('./portfolio') %>
+            <%- include('./contact') %>
+        </div>
+
+        <button onclick="toggleMenu()" class="absolute top-10 right-16 transform hover:scale-110 duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+        </button>
+        <div class="collapsible relative h-screen w-screen bg-zinc-600 hidden animate-open-burger">
+            <button onclick="hideToggle()" class="absolute top-10 right-16 transform hover:scale-110 duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-x-lg"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                </svg>
+            </button>
+            <div class="absolute translate-x-1/2 translate-y-1/2 h-1/2 w-1/2 grid place-items-center bg-zinc-700">
+                <a class="relative text-gray-300 font-bold text-3xl h-full w-full text-center" href="/about">About</a>
+                <a class="relative text-gray-300 font-bold text-3xl h-full w-full text-center"
+                    href="/portfolio">Portfolio</a>
+                <a class="relative text-gray-300 font-bold text-3xl h-full w-full text-center"
+                    href="/contact">Contact</a>
+            </div>
+        </div>
+        <div class="controls">
+            <button onclick="prev()"
+                class="prev top-1/2 left-16 fixed transform hover:scale-125 hover: max-sm:hidden hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>
+            </button>
+            <button onclick="next()"
+                class="next flex top-1/2 right-16 fixed transform hover:scale-125 hover: max-sm:hidden">
+                <span class="invisible">Discover more</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="./script/index.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+
+</html>
