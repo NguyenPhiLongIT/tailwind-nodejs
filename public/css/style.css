@@ -1,4 +1,4 @@
-.follow div:hover span, .controls button:hover span{
+.follow div:hover span, .controls button:hover span, .back2:hover span{
     visibility: visible;
     transform: translateX(15%) translateY(50%);
     transition-duration: .5s;
