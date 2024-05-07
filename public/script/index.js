@@ -13,69 +13,74 @@ const message = document.getElementById('message');
 
 current = 1;
 
-function next(){
-    if(current < totalSlide){
+function next() {
+    if (current < totalSlide) {
         current++;
         showSlide('next');
         prevSlide.style.display = 'block';
     }
-    if(current == totalSlide){
+    if (current == totalSlide) {
         nextSlide.style.visibility = 'hidden';
     }
 }
 
-function prev(){
-    if(current > 1){
+function prev() {
+    if (current > 1) {
         current--;
         showSlide('prev');
         prevSlide.style.visibility = nextSlide.style.visibility = 'visible';
     }
-    if(current == 1){
+    if (current == 1) {
         prevSlide.style.display = 'none';
     }
 }
 
-function showSlide(type){
-    for(let i = 0; i < totalSlide; i++){
+function showSlide(type) {
+    for (let i = 0; i < totalSlide; i++) {
         const element = slide[i];
-        if(type === 'next') {
+        if (type === 'next') {
             element.classList.add('animate-drop-in');
             // element.classList.remove('animate-fold-right');
         }
-        else if(type === 'prev') {
+        else if (type === 'prev') {
             element.classList.add('animate-drop-in');
             // element.classList.remove('animate-fold-left');
         }
-        if(current === i+1){
+        if (current === i + 1) {
             element.classList.remove('hidden');
-        }else{
+        } else {
             element.classList.add('hidden');
         }
     }
 }
-
-function toggleMenu(){
+const back1 = document.querySelector('.back1');
+const back2 = document.querySelector('.back2');
+function toggleMenu() {
     collapsible.style.display = 'block';
     prevSlide.style.opacity = nextSlide.style.opacity = 0;
+    back1.style.display = 'block';
+    back2.style.display = 'block';
 }
-function hideToggle(){
+function hideToggle() {
     collapsible.style.display = 'none';
     prevSlide.style.opacity = nextSlide.style.opacity = 100;
+    back1.style.display = 'none';
+    back2.style.display = 'none';
 }
 
 function sendEmail() {
     const bodyMessage = `Name: ${name.value}<br> Email: ${email.value}
     <br> Phone number: ${phone.value}<br> Message: ${message.value}`;
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "nguyenphilong.it.123@gmail.com",
-        Password : "A9D5C4AE882D75A8ADBD3A14C60E22B624BC",
-        To : 'nguyenphilong.it.123@gmail.com',
-        From : "nguyenphilong.it.123@gmail.com",
-        Subject : subject.value,
-        Body : bodyMessage
+        Host: "smtp.elasticemail.com",
+        Username: "nguyenphilong.it.123@gmail.com",
+        Password: "A9D5C4AE882D75A8ADBD3A14C60E22B624BC",
+        To: 'nguyenphilong.it.123@gmail.com',
+        From: "nguyenphilong.it.123@gmail.com",
+        Subject: subject.value,
+        Body: bodyMessage
     }).then(
-      message => alert(message)
+        message => alert(message)
     );
 }
 
