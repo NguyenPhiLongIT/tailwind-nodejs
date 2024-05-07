@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "install": "npm install express concurrently ejs -D tailwindcss",
     "buildcss": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch",
     "start": "concurrently \"npm run buildcss\" \"nodemon app.js\""
   },
