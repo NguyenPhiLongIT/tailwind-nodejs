@@ -19,7 +19,7 @@
     inset: 0 0 0 0;
     background: #222831;
     z-index: -1;
-    transition: transform .3s ease;
+    transition: transform .4s ease;
 }
 .projects:hover{
     transition: all .3s;
