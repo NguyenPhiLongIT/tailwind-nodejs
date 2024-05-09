@@ -1,8 +1,9 @@
-.follow div:hover span, .controls button:hover span, .back2:hover span{
+.follow div:hover span{
     visibility: visible;
     transform: translateX(15%) translateY(50%);
-    transition-duration: .5s;
+    transition-duration: .6s;
 }
+
 .collapsible a::before{
     transform: scaleX(0);
     transform-origin: bottom right;
@@ -34,4 +35,12 @@
     margin-bottom: 24px;
     outline: none;
     border: 2px solid #0288D1;
+}
+.dots a{
+    margin-top: 0.4rem;
+}
+.dots a:hover span{
+    visibility: visible;
+    transform: translateX(-110%);
+    transition-duration: .6s;
 }

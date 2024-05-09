@@ -3,6 +3,10 @@ module.exports = {
   content: ["./views/**/*.ejs", "./public/script/**/*.js"],
   theme: {
     extend: {
+      spacing: {
+        '45%': '45%',
+        '5%': '5%'
+      },
       keyframes:{
         'trans-slide-right':{
           'animation-timing-function': 'cubic-bezier(0, 0.2, 0.2, 1)',
