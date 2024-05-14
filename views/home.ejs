@@ -174,12 +174,24 @@
                 </svg>
             </button>
             <div class="absolute translate-x-1/2 translate-y-1/2 h-1/2 w-1/2 grid place-items-center bg-zinc-700">
-                <a onclick="hideToggle()" class="relative text-gray-300 font-bold text-3xl h-full w-full text-center active" 
-                    href="#about">About</a>
-                <a onclick="hideToggle()" class="relative text-gray-300 font-bold text-3xl h-full w-full text-center"
-                    href="#portfolio">Portfolio</a>
-                <a onclick="hideToggle()" class="relative text-gray-300 font-bold text-3xl h-full w-full text-center"
-                    href="#contact">Contact</a>
+                <a onclick="hideToggle()" class="relative h-full w-full flex active" 
+                    href="#about">
+                    <span class="text-gray-300 font-bold text-3xl m-auto">
+                        About
+                    </span>
+                </a>
+                <a onclick="hideToggle()" class="relative h-full w-full flex" 
+                    href="#portfolio">
+                    <span class="text-gray-300 font-bold text-3xl m-auto">
+                        Portfolio
+                    </span>
+                </a>
+                <a onclick="hideToggle()" class="relative h-full w-full flex" 
+                    href="#contact">
+                    <span class="text-gray-300 font-bold text-3xl m-auto">
+                        Contact
+                    </span>
+                </a>
             </div>
         </div>
         <div class="dots top-45% right-14 grid place-items-center fixed max-sm:hidden">
