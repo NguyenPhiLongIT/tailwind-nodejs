@@ -165,7 +165,7 @@
             </svg>
         </button>
         <div class="collapsible relative h-screen w-screen bg-zinc-600 hidden animate-open-burger">
-            <button onclick="hideToggle()" class="absolute top-10 right-16 transform hover:scale-110 duration-200
+            <button onclick="hideToggle()" class="absolute top-10 right-16 transform hover:scale-110 duration-200 z-10
                 max-sm:top-5% max-sm:right-5%">
                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-x-lg"
                     viewBox="0 0 16 16">
@@ -173,7 +173,8 @@
                         d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
                 </svg>
             </button>
-            <div class="absolute translate-x-1/2 translate-y-1/2 h-1/2 w-1/2 grid place-items-center bg-zinc-700">
+            <div class="absolute translate-x-1/2 translate-y-1/2 h-1/2 w-1/2 grid place-items-center bg-zinc-700
+                max-sm:translate-x-0 max-sm:translate-y-0 max-sm:h-full max-sm:w-full">
                 <a onclick="hideToggle()" class="relative h-full w-full flex active" 
                     href="#about">
                     <span class="text-gray-300 font-bold text-3xl m-auto">
